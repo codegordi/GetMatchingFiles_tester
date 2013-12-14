@@ -1,4 +1,3 @@
-
 package getmatchingfiles_tester;
 
 import java.io.File;
@@ -22,7 +21,7 @@ import javafx.stage.Window;
 
 /**
  *
- * @author gutich01
+ * @author cgutierrez
  */
 public class GetMatchingFiles_tester extends Application {
 
@@ -61,7 +60,7 @@ public class GetMatchingFiles_tester extends Application {
         root.getChildren().add(btn);
         primaryStage.setScene(new Scene(root, 300, 250));
         primaryStage.show();
-        //openApp(root);
+
     }
     
     private void openApp(StackPane root) throws IOException {
@@ -110,7 +109,6 @@ public class GetMatchingFiles_tester extends Application {
             }
         };
         
-        //final File[] fileList = selectedDir.listFiles(filter);
         fileList = selectedDir.listFiles(filter);
         
         if (0 == fileList.length) {
@@ -129,7 +127,6 @@ public class GetMatchingFiles_tester extends Application {
     
     public static File[] getMatchingFiles(File file) throws IOException {
         
-        //File dir = file.getParentFile(); File[] fls = dir.listFiles();
         File[] fls = fileList;
         String filename = file.getName();
         File[] imageSet = new File[4]; // = new File[4]; // TODO: change once have set with d[epth] images
